@@ -1,0 +1,193 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Georgia', serif;
+}
+
+/* Navbar */
+.navbar {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 40px;
+  color: white;
+  z-index: 10;
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.book-btn {
+  background: gold;
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Video */
+.bg-video {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+/* Dark overlay */
+.hero::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.4);
+  z-index: 2;
+}
+
+/* Overlay Content */
+.overlay {
+  position: relative;
+  z-index: 3;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+}
+
+/* Welcome */
+.welcome-text {
+  font-size: 18px;
+  letter-spacing: 4px;
+  margin-bottom: 10px;
+  opacity: 0.8;
+}
+
+/* Title */
+.overlay h1 {
+  font-size: 60px;
+  font-weight: 300;
+  margin-bottom: 20px;
+  animation: fadeUp 2s ease;
+}
+
+/* Button */
+.discover-btn {
+  padding: 10px 20px;
+  border: 1px solid white;
+  background: transparent;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.discover-btn:hover {
+  background: white;
+  color: black;
+}
+
+/* Bottom Menu */
+.menu {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 20px;
+  background: #f5f5f5;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #555;
+  font-size: 14px;
+}
+
+/* Animation */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+}
+/* Image Section */
+.image-section {
+  display: flex;
+  gap: 20px;
+  padding: 40px;
+  background: #fff;
+}
+
+/* Box */
+.image-box {
+  position: relative;
+  width: 50%;
+  overflow: hidden;
+}
+
+/* Image */
+.image-box img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  transition: 0.5s;
+}
+
+/* Hover Zoom */
+.image-box:hover img {
+  transform: scale(1.1);
+}
+
+/* Caption */
+.caption {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: white;
+}
+
+/* Title */
+.caption h3 {
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+
+/* Text */
+.caption p {
+  font-size: 14px;
+}
+
+/* Dark overlay on image */
+.image-box::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.3);
+  top: 0;
+  left: 0;
+}
